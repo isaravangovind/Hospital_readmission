@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GPay Transaction</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+				background-color: #f4f4f4;
+			}
+			h1 {
+				color: #450b9d;
+			}
+			h3 {
+				color: #333;
+			}
+			form {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				margin-top: 20px;
+			}
+			label {
+				display: block;
+				margin-bottom: 5px;
+			}
+			input[type="text"], select {
+				width: 200px;
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 20px;
+			}
+			table, th, td {
+				border: 1px solid #ccc;
+			}
+			th, td {
+				padding: 10px;
+				text-align: left;
+			}
+			button {
+				background-color: #450b9d;
+				color: white;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>GPay Transaction</h1>
+		<h3>Add Transaction</h3>
+		<form>
+			<label for="txn_id">Transaction ID:</label>
+			<div><input type="text" id="txn_id" name="txn_id" required><br><br></div>
+			<div><label for="date">Date:</label></div>
+			<div><input type="text" id="date" name="date" required><br><br></div>
+			<div><label for="payee">Payee:</label></div>
+			<div><input type="text" id="payee" name="payee" required><br><br></div>
+			<div><label for="amount">Amount:</label></div>
+			<div><input type="text" id="amount" name="amount" required><br><br></div>
+			<div><label for="transaction_type">Description:</label></div>
+			<div><select id="transaction_type" name="transaction_type">
+				<option value="">Select Description</option>
+				<option value="CREDIT">CREDIT</option>
+				<option value="DEBIT">DEBIT</option>
+			</select></div>
+			<div><button type="button" onclick="addTransaction()">Add Transaction</button></div>
+		</form>
+
+		<table border="1" cellpadding="5" cellspacing="0">
+			<thead>
+				<tr>
+					<th>Transaction ID</th>
+					<th>Date</th>
+					<th>Payee</th>
+					<th>Amount</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody id="transactionTableBody">
+				<!-- Transaction rows will be dynamically added here -->
+			</tbody>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find . -not -path './.venv*' -not -path '*/__pycache__*' -not -path './.git/*' -not -name .DS_Store | sort; echo; wc -l src/*.py *.sql *.txt 2>/dev/null; echo; cat .gitignore 2>/dev/null; echo \"--- env keys:\"; sed 's/=.*/=<redacted>/' .env; cat .env.example 2>/dev/null)",
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(.venv/bin/python -c \"import src.models\")",
+      "Bash(.venv/bin/python -c \"import src.database\")",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}

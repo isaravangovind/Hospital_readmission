@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Diabetes Prediction</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 20px;
+				background-color: #f4f4f4;
+			}
+			h1 {
+				color: #450b9d;
+			}
+			h3 {
+				color: #333;
+			}
+			form {
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				margin-top: 20px;
+			}
+			label {
+				display: block;
+				margin-bottom: 5px;
+			}
+			input[type="text"], select {
+				width: 200px;
+				padding: 5px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Diabetes Prediction</h1>
+		<h3>Add Patient Encounter</h3>
+		<form>
+			<label for="patient_id">Patient ID:</label>
+			<div><input type="text" id="patient_id" name="patient_id" required><br><br></div>
+			<div><label for="age">Age:</label></div>
+			<div><select id="age" name="age" >
+				<option value="">Age Group</option>
+				<option value="20-30">20-30</option>
+				<option value="31-40">31-40</option>
+				<option value="41-50">41-50</option>
+				<option value="51-60">51-60</option>
+				<option value="61+">61+</option>
+			</select></div>
+			<div><label for="timeinhospital">Time in Hospital (days)</label></div>
+			<div><input type="text" id="timeinhospital" name="timeinhospital" required><br><br></div>
+			<div><label for="inpatientvisits">In-Patient Visits:</label></div>
+			<div><input type="text" id="inpatientvisits" name="inpatientvisits" required><br><br></div>
+		</form>
+	</body>
+</html>
